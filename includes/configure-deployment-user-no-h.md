@@ -15,8 +15,9 @@ In the Cloud Shell, create deployment credentials with the [`az webapp deploymen
 In the following example, replace *\<username>* and *\<password>* (including brackets) with a new user name and password. The user name must be unique within Azure. The password must be at least eight characters long, with two of the following three elements: letters, numbers, symbols. 
 
 ```azurecli-interactive
-az webapp deployment user set --user-name <username> --password <password>
+az webapp deployment user set --user-name <username>
 ```
+After pressing Enter, you will be prompted for a password and to then confirm that password.
 
 You should get a JSON output, with the password shown as `null`. If you get a `'Conflict'. Details: 409` error, change the username. If you get a ` 'Bad Request'. Details: 400` error, use a stronger password.
 
